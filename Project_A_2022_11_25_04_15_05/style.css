@@ -1,7 +1,49 @@
 html, body {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
+  /* margin:auto; */
+  font-size: 30pt;
+  background-color:rgb(123, 104, 214);
+
 }
+
+#title {
+  position: sticky;
+  top: 0;
+  /* margin: auto; */
+  font-size: 80px;
+  background-color: rgb(189, 147, 189);
+}
+
+#link {
+  display: absolute;
+  /* margin:auto; */
+  /* top: 8px; */
+  margin-top: 20px;;
+  margin-left: 60%;
+  margin-bottom: 40px;
+  /* margin-right:2px; */
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#canvasContainer {
+  font: size 10px;;
+  font-style: initial ;
+  text-decoration-line: overline;
+}
+
 canvas {
   display: block;
+  margin: auto;
+  /* width: 500px; */
 }
+
+#intro {
+  position: block;
+  margin: auto;
+  font-size: 30px;
+  width: 800px;
+  margin-bottom: 40px;
+}
+

@@ -3,7 +3,8 @@ let particles = [];
 let seq = 0;
 
 function setup() {
-  createCanvas(800, 800);
+  let canvas = createCanvas(800, 800);
+  canvas.parent("canvasContainer");
 
   for (let i = 0; i < NUM_OF_PARTICLES; i++) {
     particles.push(new Particle(random(width), random(height)));
