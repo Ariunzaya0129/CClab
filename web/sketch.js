@@ -86,7 +86,7 @@ function draw() {
       }
       // console.log(counter)
       image(img, xpos, ypos, img.width * factor, img.height * factor);
-      if (counter > 60) {
+      if (counter > 600) {
         transforming = false;
         mode = 1;
       }
@@ -147,7 +147,7 @@ if (mouseIsPressed&&!transforming2){
       // console.log(counter)
       
   // console.log(xpos1, ypos1)
-       if (counter3 > 600) {
+       if (counter3 > 900) {
       transforming3 = false;
        mode = 3;
       }
