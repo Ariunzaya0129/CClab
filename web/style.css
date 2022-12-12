@@ -1,0 +1,35 @@
+html, body {
+  z-index: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(0, 255, 238) 0%, rgb(0, 0, 255) 35%, rgb(255, 0, 85) 100%);
+      margin: 0;
+      padding: 0;
+    }
+    #canvasContainer{
+      z-index: -1;
+      margin-top: 9px;
+      margin-right: 9px;
+        }
+    .canvas {
+      z-index: -1;
+     
+      display: none;
+    } 
+    h1{
+ 
+
+      font-size: 90px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      text-align: center; 
+    }
+    h2{
+  
+      position: relative;
+      
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      text-align: center;
+    
+    }

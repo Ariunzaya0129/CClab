@@ -33,9 +33,10 @@ let factor3=0.4
 function preload() {
   // preload() runs once
   img = loadImage("assets/eye.png");
-  img2 = loadImage("assets/gerte.jpeg");
+  img2 = loadImage("assets/mongol.jpeg");
   img3 = loadImage("assets/nature3.jpg");
   img4 = loadImage("assets/anza.jpg")
+  img5 = loadImage("assets/nogoonn1.jpeg");
   
 }
 
@@ -121,24 +122,25 @@ if (mouseIsPressed&&!transforming2){
       //image(img2, 0, 0, img2.width / 2, img2.height / 4);
       for (let i = 0; i < 200; i++) {
     pointillize = map(mouseX, 0, width, smallPoint, largePoint);
-    x = floor(random(img2.width/1));
-    y = floor(random(img2.height/1));
-    pix = img2.get(x, y);
+    x = floor(random(img5.width*2));
+    y = floor(random(img5.height*1.5));
+    pix = img5.get(x, y);
     fill(pix, 128);
     ellipse(x, y, pointillize, pointillize);
         
   }      if (mouseIsPressed&&!transforming3){
-  if (mouseX>210 && mouseX < 260 && mouseY <630  && mouseY >670){
+  if (mouseX>310 && mouseX < 600 && mouseY >300  && mouseY <670){
     transforming3 = true 
     console.log(transforming3)
       }
 }
-  if (transforming2) {
-    image(img, 0+xpos1, 0+ypos1, img2.width*2.5 * factor3, img2.height*2.5 * factor3);
-        factor3 = factor3 + 0.002;
+  if (transforming3) {
+    // scale(1.3)
+    image(img5, 0+xpos3, 0+ypos3, img5.width*3 * factor3, img5.height*3 * factor3);
+        factor3 = factor3 + 0.001;
         counter3 = counter3 + 2;
-        xpos3 = xpos3 - 2.8;
-        ypos3 = ypos3 - 1;
+        xpos3 = xpos3 - 2;
+        ypos3 = ypos3 - 1.3;
   
     // console.log("done")
       }
@@ -152,7 +154,7 @@ if (mouseIsPressed&&!transforming2){
       
       break;
     case 3:
-      image(img, xpos, ypos, img.width * factor, img.height * factor)
+      //image(img, xpos, ypos, img.width/factor3, img.height/factor3)
       break;
     default:
     //
