@@ -19,6 +19,12 @@ let counter3=0
 let xpos3=0
 let ypos3=0
 let factor3=0.4
+let transforming4 =false
+let counter4=0
+let xpos4=0
+let ypos4=0
+let factor4=0.4
+
     let x;
     let y;
     let pix
@@ -147,15 +153,51 @@ if (mouseIsPressed&&!transforming2){
       // console.log(counter)
       
   // console.log(xpos1, ypos1)
-       if (counter3 > 900) {
+       if (counter3 > 1000) {
       transforming3 = false;
        mode = 3;
       }
       
       break;
     case 3:
+      for (let i = 0; i < 200; i++) {
+    pointillize = map(mouseX, 0, width, smallPoint, largePoint);
+    x = floor(random(img5.width*2));
+    y = floor(random(img5.height*1.5));
+    pix = img2.get(x, y);
+    fill(pix, 128);
+    ellipse(x, y, pointillize, pointillize);}
+        if (mouseIsPressed&&!transforming4){
+  if (mouseX>400 && mouseX < 600 && mouseY >300  && mouseY <670){
+    transforming4 = true 
+    console.log(transforming4)
+      }
+}
+  if (transforming4) {
+    // scale(1.3)
+    image(img2, 0+xpos4, 0+ypos4, img2.width*3 * factor4, img2.height*3 * factor4);
+        factor4 = factor4 + 0.0006;
+        counter4 = counter4 + 3;
+        xpos4 = xpos4 - 2;
+        ypos4 = ypos4 - 1.3;
+  
+    // console.log("done")
+      }
+      // console.log(counter)
+      
+  // console.log(xpos1, ypos1)
+       if (counter4 > 1800) {
+      transforming4 = false;
+       mode = 4;
+      }
       //image(img, xpos, ypos, img.width/factor3, img.height/factor3)
       break;
+      case 4:
+      background(255)
+      image(img, 0, 0, img.width / 4, img.height / 4);
+       
+      break;
+      //
     default:
     //
   }
